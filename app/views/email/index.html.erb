@@ -1,0 +1,25 @@
+<html>   
+    <head>
+        <%= render 'header' %>
+    </head>
+
+    <body>
+        <div class="container">    
+            <div class='mails'>
+            <h1>Mailbox</h1>
+                <% @emails.each_with_index do |f, index| %>
+                    <input type="hidden" value="<%f.id%>"/>
+                        <div class="mailcontainer">
+                            Email N° <%= index+1 %> <br>
+                            Object: <%= f.object %><br>
+                            <br>
+                        </div>
+                <% end %>
+            </div>
+            <div class='read' style="display:none">
+                <h1>Content</h1>
+                <%= @read_content %>
+            </div>
+        </div>
+    </body>
+</html>
