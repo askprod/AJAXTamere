@@ -2,10 +2,10 @@
 <div class="mailcontainer-two">
     <br>
     <p>FROM<p>
-    <h1><%= @read_content.sender %></h1>
+    <h1><%= @read_content.sender.downcase %></h1>
     <br>
     <p>OBJECT</p>
-    <h1><%= @read_content.object %></u></h1>
+    <h1><%= @read_content.object.downcase %></u></h1>
     <br>
     <p>CONTENT</p>
     <h1><%= @read_content.body.downcase %></h1>
