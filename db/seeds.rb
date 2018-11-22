@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do |index|
-    Email.create!(object: Faker::StarWars.planet, body: Faker::StarWars.quote,read: false)
+    Email.create!(object: Faker::StarWars.planet, body: Faker::StarWars.quote)
 end

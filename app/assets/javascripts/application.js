@@ -20,5 +20,5 @@
 
 
 $(document).on("click", ".mailcontainer", function(){
-    $(".read").show();
+    $("#read").show(1000);
  });

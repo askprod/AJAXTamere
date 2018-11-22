@@ -7,18 +7,19 @@
         <div class="container">    
             <div class='mails'>
             <h1>Mailbox</h1>
-                <% @emails.each_with_index do |f, index| %>
-                    <input type="hidden" value="<%f.id%>"/>
-                        <div class="mailcontainer">
-                            Email N° <%= index+1 %> <br>
-                            Object: <%= f.object %><br>
-                            <br>
-                        </div>
+                <% @emails.each do |f| %>
+                    <%= link_to email_path(f.id), remote: true do %>
+                            <div class="mailcontainer">
+                                Email N° <%= f.id %> <br>
+                                Object: <%= f.object %><br>
+                                Status: <%= f.read %>
+                                <br>
+                            </div>
+                    <% end %>
                 <% end %>
             </div>
-            <div class='read' style="display:none">
-                <h1>Content</h1>
-                <%= @read_content %>
+            <div id="read" style="display:none">
+                <h1>Content<h1>
             </div>
         </div>
     </body>
