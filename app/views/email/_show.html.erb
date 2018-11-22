@@ -1,8 +1,12 @@
-<h1>Email N°<%= @read_content.id %></h1>
+<h1>email n°<%= @read_content.id %></h1>
 <div class="mailcontainer-two">
-    <h2><u>Object:</u></h2>
-    <h2><%= @read_content.object %></u></h2>
     <br>
-    <h3><u>Content:</u></h3>
-    <h1><%= @read_content.body %></h1>
+    <p>FROM<p>
+    <h1><%= @read_content.sender %></h1>
+    <br>
+    <p>OBJECT</p>
+    <h1><%= @read_content.object %></u></h1>
+    <br>
+    <p>CONTENT</p>
+    <h1><%= @read_content.body.downcase %></h1>
 </div>
