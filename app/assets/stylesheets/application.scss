@@ -15,7 +15,7 @@
  @import "bootstrap";
 
 body {
-    background-image: image-url('background2.png');
+    background-image: image-url('background4.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -27,7 +27,14 @@ body {
     justify-content: space-between;
 }
 
-.mailcontainer{
+.mailcontainer-one {
+    border: solid 2px rgb(151, 151, 151);
+    background-color: rgba(201, 201, 201, 0.3);
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.mailcontainer-two {
     border: solid 2px rgb(151, 151, 151);
     background-color: rgba(201, 201, 201, 0.3);
     border-radius: 5px;
@@ -55,10 +62,26 @@ body {
 
 #read {
     text-align: center;
-    width: 300px;
+    width: 500px;
     margin-top: 100px;
     margin-bottom: 50px;
     border: solid 5px rgb(37, 37, 37);
     border-radius: 20px;
     background-color: rgba(65, 65, 65, 0.9);
+}
+
+#new {
+    color: rgba(172, 0, 0, 0.5);
+    background-color: rgba(100, 55, 55, 0.3);
+    border-radius: 5px;
+}
+
+.navbar a {
+    color: rgba(201, 201, 201, 0.3) !important;
+}
+
+.navbar {
+    background-color: rgba(65, 65, 65, 0.9) !important;
+    border-radius: 15px !important;
+    margin-top: 10px !important;
 }

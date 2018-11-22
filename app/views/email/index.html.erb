@@ -9,17 +9,16 @@
             <h1>Mailbox</h1>
                 <% @emails.each do |f| %>
                     <%= link_to email_path(f.id), remote: true do %>
-                            <div class="mailcontainer">
+                            <div class="mailcontainer-one">
                                 Email N° <%= f.id %> <br>
                                 Object: <%= f.object %><br>
-                                Status: <%= f.read %>
+                                <span id="new" class="attribute_<%= f.id %>">NEW!</span>
                                 <br>
                             </div>
                     <% end %>
                 <% end %>
             </div>
             <div id="read" style="display:none">
-                <h1>Content<h1>
             </div>
         </div>
     </body>
