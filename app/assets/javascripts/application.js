@@ -18,7 +18,3 @@
 //= require turbolinks
 //= require_tree .
 
-
-$(document).on("click", ".mailcontainer-one", function(){
-    $("#read").show(1000);
- });

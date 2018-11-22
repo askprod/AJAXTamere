@@ -11,7 +11,7 @@
                     <%= link_to email_path(f.id), remote: true do %>
                             <div class="mailcontainer-one">
                                 Email N° <%= f.id %> <br>
-                                Object: <%= f.object %><br>
+                                From: <%= f.sender %><br>
                                 <span id="new" class="attribute_<%= f.id %>">NEW!</span>
                                 <br>
                             </div>
