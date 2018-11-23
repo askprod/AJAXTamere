@@ -15,7 +15,7 @@
                                 <span id="new" class="attribute_<%= f.id %>">NEW!</span>
                                 <br>
                                 <div class="buttoncontainer">
-                                    <%= link_to email_path(f.id), remote: true, method: :delete,  data: { confirm: 'Are you sure?' } do %>
+                                    <%= link_to email_path(f.id), remote: true, method: :delete,  data: { confirm: "Are you sure you want to delete #{f.sender}'s email?" } do %>
                                         <button class="deletebutton">X</button>
                                     <% end %>
                                 </div>
