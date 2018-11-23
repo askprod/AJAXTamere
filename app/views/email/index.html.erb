@@ -9,11 +9,16 @@
             <h1>mailbox</h1>
                 <% @emails.each do |f| %>
                     <%= link_to email_path(f.id), remote: true do %>
-                        <div class="mailcontainer-one">
-                            Email N° <%= f.id %> <br>
-                            From: <%= f.sender %><br>
-                            <span id="new" class="attribute_<%= f.id %>">NEW!</span>
-                            <br>
+                        <div class="mailcontainer-one email_<%=f.id%>">
+                                Email N° <%= f.id %> <br>
+                                From: <%= f.sender %><br>
+                                <span id="new" class="attribute_<%= f.id %>">NEW!</span>
+                                <br>
+                                <div class="buttoncontainer">
+                                    <%= link_to email_path(f.id), remote: true, method: :delete,  data: { confirm: 'Are you sure?' } do %>
+                                        <button class="deletebutton">X</button>
+                                    <% end %>
+                                </div>
                         </div>
                     <% end %>
                 <% end %>

@@ -21,4 +21,14 @@ class EmailController < ApplicationController
 
   end
 
+  def destroy
+    @delete_content = Email.find(params[:id])
+    @delete_content.destroy
+
+    respond_to do |format|
+      format.html
+      format.js 
+    end
+  end
+
 end
